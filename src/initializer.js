@@ -783,12 +783,12 @@ export function activator(canvas, webGL, colorFormat, PROGRAMS, pointers) {
         pointers[0].y = e.offsetY;
     });
 
-    canvas.addEventListener('mousedown', () => {
+    canvas.addEventListener('mouseover', () => {
         pointers[0].down = true;
         pointers[0].color = generateColor();
     });
 
-    window.addEventListener('mouseup', () => {
+    canvas.addEventListener('mouseout', () => {
         pointers[0].down = false;
     });
 
